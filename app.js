@@ -26,16 +26,16 @@ printOdds(3);
 // Exercise 2 Section
 console.log("EXERCISE 2:\n==========\n");
 
-function checkAge(age = 18) {
-    let aboveSixteen = "You can drive!";
-    let belowSixteen = "Sorry, but you need to wait until you're 16.";
+function checkAge(age = 18, name = "Jack") {
+    let aboveSixteen = `You can drive ${name}!`;
+    let belowSixteen = `Sorry ${name}, but you need to wait until you're 16.`;
     if (age>= 16) {
         console.log(aboveSixteen); 
     } else {
         console.log(belowSixteen);
     }
 }
-checkAge(23);
+checkAge(23, "James");
 
 // Exercise 3 Section
 console.log("EXERCISE 3:\n==========\n");
@@ -49,13 +49,15 @@ function whichQuadrant(x, y) {
         console.log(`${x}, ${y} is in Quadrant 3!`)
     } else if (x > 0 && y < 0) {
         console.log(`${x}, ${y} is in Quadrant 4!`)
-    } else if (x == 0) {
+    } else if (x == 0 && y != 0) {
         console.log(`${x}, ${y} is on the X axis!`)
-    } else if (y == 0) {
+    } else if (x != 0 && y == 0) {
         console.log(`${x}, ${y} is on the Y axis!`)
+    } else if (x == 0 && y == 0) {
+        console.log(`${x}, ${y} is on the Origin!`)
     }
 }
-whichQuadrant(0, -8);
+whichQuadrant(0, 0);
 //console.log(`${x}, ${y}`)
 
 // Exercise 4 Section
